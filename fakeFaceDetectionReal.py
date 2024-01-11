@@ -1,18 +1,23 @@
-import numpy as np
-import cv2
 import os
+import cv2
+
+import numpy as np
+
 from sklearn.preprocessing import LabelEncoder,OneHotEncoder
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import confusion_matrix
+
 import seaborn as sns
 import matplotlib.pyplot as plt
 from keras.models import Sequential
+
 from keras.layers import Dense, Conv2D, MaxPooling2D, Flatten, Dropout
 from keras.preprocessing.image import ImageDataGenerator
 
 path = "data"
 
 myList=os.listdir(path)
+
 noOfClasses=2
 #len(myList)
 
